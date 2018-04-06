@@ -1,0 +1,50 @@
+html * {
+    -webkit-border-radius: 0;
+    -webkit-box-sizing: border-box;
+    border-radius: 0;
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+    word-wrap: break-word;
+}
+ul li {
+    list-style-type: none;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+header {
+    width: 100%;
+}
+header .c1 {
+    display: none;
+}
+header nav {
+    background: #eee;
+    display: grid;
+    grid-template-columns: 60px 1fr 60px;
+    text-align: center;
+}
+header nav * {
+    line-height: 50px;
+}
+header nav #left, header nav #right {
+    font-size: 18px;
+}
+header nav label {
+    cursor: pointer;
+    user-select: none;
+}
+header #cb1:checked ~.c1 {
+    display: block;
+}
+header #cb1, header #cb2 {
+    display: none;
+}
+header #nav-menu {
+    background: #ddd;
+}
