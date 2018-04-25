@@ -9,42 +9,193 @@ html * {
     padding: 0;
     vertical-align: baseline;
     word-wrap: break-word;
+    font-display: optional;
+    font-family: helvetica;
 }
 ul li {
     list-style-type: none;
 }
 a {
+    color: #03A9F4;
     cursor: pointer;
     text-decoration: none;
 }
-header {
-    width: 100%;
-}
-header .c1 {
-    display: none;
-}
-header nav {
-    background: #eee;
-    display: grid;
-    grid-template-columns: 60px 1fr 60px;
+h1 {
+    font-size: 2em;
     text-align: center;
 }
-header nav * {
-    line-height: 50px;
+h2 {
+    font-size: 1.5em;
 }
-header nav #left, header nav #right {
-    font-size: 18px;
-}
-header nav label {
+.btn {
+    background: #2196f3;
+    color: #fff;
     cursor: pointer;
-    user-select: none;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
 }
-header #cb1:checked ~.c1 {
+.btn:hover {
+    opacity: 0.8;
+}
+
+header {
+    margin: 0 auto;
+}
+header nav {
+    display: grid;
+    grid-template-columns: 60px 1fr 60px;
+    line-height: 50px;
+    text-align: center;
+}
+header nav #left {
+    font-size: 1.2em;
+    color: #000;
+}
+header nav #middle {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #000;
+}
+
+main * {
+    padding: 0 15px;
+}
+section {
+    background: #f5f7f9;
+    display: flex;
+    height: 100vh;
+}
+.home-panel {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 10% 0 15%;
+    align-items: center;
+}
+.home-panel * {
+    max-width: 800px;
+}
+.home-panel h1, .home-panel h2 {
+    flex-grow: 1;
+}
+.home-panel p {
+    flex-grow: 7;
+    font-size: 1.2em;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+.home-panel .btn {
+    margin-bottom: 10px;
+    width: 300px;
+}
+#s0 {
+    background-image: url('/img/0.png');
+    background-position: 90% 50%;
+    height: calc(100vh - 50px);
+}
+#s1 {
+    background-image: url('/img/1.jpg');
+}
+#s2 {
+    background-image: url('/img/2.jpg');
+}
+#s3 {
+    background-image: url('/img/3.jpg');
+}
+
+form {
+    background: #fff;
+    max-width: 320px;
+    align-self: center;
+    margin: 0 auto;
+    padding: 2em 1em;
+    border-radius: 4px;
+    box-shadow: 0 15px 35px rgba(50,50,93,0.1), 0 5px 15px rgba(0,0,0,0.07);
+}
+form #welcome {
     display: block;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1em;
 }
-header #cb1, header #cb2 {
-    display: none;
+form input {
+    border: 1px solid #ccc;
+    margin: 10px 0 10px;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
 }
-header #nav-menu {
-    background: #ddd;
+form input:hover, form input:focus {
+    border-color: #03A9F4;
+}
+form label {
+    margin: 0;
+    padding: 0;
+}
+form #login-options {
+    margin: 0 0 10px;
+    padding: 0;
+    line-height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+form #login-options label {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+form #login-options label input {
+    width: 10%;
+    flex: 1;
+    margin: 0; 
+}
+form #login-options label span {
+    font-size: 12px;
+    flex: 4;
+    padding: 0;
+}
+form #login-options a {
+    font-size: 12px;
+    width: 50%;
+    text-align: right;
+}
+form .btn {
+    width: 100%;
+    line-height: 40px;
+    text-transform: none;
+}
+form #no-acct {
+    margin-top: 1.5em;
+    text-align: center;
+    padding: 0;
+    font-size: 15px;
+}
+form #no-acct a {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    margin: 1em 0 2em;
+    text-align: center;
+}
+footer span {
+    color: #555;
+    font-size: .9em;
+}
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px auto;
+    max-width: 200px;
+}
+footer a {
+    color: #333;
 }
